@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
+
+
+<context:component-scan base-package="fr.amnezic.qcwebcontrol.model" /> <!-- permet de charger les ejb-->
+
+<bean id="modelDataSource"
+     class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+  <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+  <property name="url" value="jdbc:mysql://localhost:3306/qcwebcontrol-model" />
+  <property name="username" value="androgene" />
+  <property name="password" value="androgenepw" />
+</bean>
+
+<bean id="modelEntityManagerFactory" 
+    class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" >
+  <property name="jpaVendorAdapter">
+     <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+     	<property name="showSql" ><bean class="java.lang.Boolean" ><constructor-arg index="0" value="true"/></bean></property>
+        <property name="generateDdl"><bean class="java.lang.Boolean" ><constructor-arg index="0" value="true"/></bean></property>
+        <property name="databasePlatform" value="org.hibernate.dialect.MySQLDialect" />
+     </bean>
+ </property>
+ <!--property name="packagesToScan" value="fr.amnezic.qcwebcontrol.model" /-->
+ <property name="persistenceUnitName" value="qcwebcontrol-model"></property>
+ </bean>
+ 
+<bean id="modelTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+  <property name="dataSource" ref="modelDataSource"/>
+</bean>
+<tx:annotation-driven transaction-manager="txManager" />
+
+    
+</beans>
