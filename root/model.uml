@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model="http://Androgene/schemas/Model/_ixqTYLQPEeKekLLXQKuVng/16" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http://Androgene/schemas/Model/_ixqTYLQPEeKekLLXQKuVng/16 file:/home/vinsnet/git/generator-spring/fr.vinsnet.tarots/fr.vinsnet.generator.core/models/androgene.profile.uml#_ixq6cLQPEeKekLLXQKuVng">
+  <uml:Model xmi:id="_vybwMMbVEeKyf_vZNpvnLw" name="fr.amnezic.qcwebcontrol">
+    <packageImport xmi:id="_pKCN8MbXEeKyf_vZNpvnLw">
+      <importedPackage xmi:type="uml:Model" href="../../fr.vinsnet.generator.core/models/types-uml.uml#_HbfdMLPzEeKYaO6e_TaXyw"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_wWoCYMbVEeKyf_vZNpvnLw" name="model">
+      <packagedElement xmi:type="uml:Class" xmi:id="_5JzvQMbVEeKyf_vZNpvnLw" name="Message">
+        <ownedAttribute xmi:id="_7OaEQMbVEeKyf_vZNpvnLw" name="contenu" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="../../fr.vinsnet.generator.core/models/types-uml.uml#_rTbpgLP2EeKPAOs8uz-flg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_X8n8MMbWEeKyf_vZNpvnLw" name="isValid">
+          <type xmi:type="uml:PrimitiveType" href="../../fr.vinsnet.generator.core/models/types-uml.uml#_6ZnlgLP2EeKPAOs8uz-flg"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_b1dO8MbWEeKyf_vZNpvnLw" name=""/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gqPzoMbWEeKyf_vZNpvnLw" name="dateValidation">
+          <type xmi:type="uml:PrimitiveType" href="../../fr.vinsnet.generator.core/models/types-uml.uml#_lTECgLP2EeKPAOs8uz-flg"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_vy97sMbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_vy_J0MbVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_TZ_nULU5EduiKqCzJMWbGw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_v2H9YMbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_v2H9YcbVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_Gx8MgLX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_v2IkcMbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_v2IkccbVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_fSw28LX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_v2IkcsbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_v2Ikc8bVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_rpx28LX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_v2IkdMbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_v2IkdcbVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//constraints"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_5WYJ0LX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_v2IkdsbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_v2Ikd8bVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_C2zXMLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_v2JLgMbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_v2JLgcbVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_NxdG4LX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_v2JLgsbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_v2JLg8bVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_OOJC4LX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_v2JLhMbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_v2JLhcbVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//interactions"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_meOioLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_v2JykMbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_v2JykcbVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//statemachines"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_nAF5kLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_v2JyksbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_v2Jyk8bVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//usecases"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_neZmMLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_1Q91cMbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_1RL34MbVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../fr.vinsnet.generator.core/models/androgene.profile.uml#_ixoeMLQPEeKekLLXQKuVng"/>
+      </eAnnotations>
+      <appliedProfile href="../fr.vinsnet.generator.core/models/androgene.profile.uml#_J8L9MLBiEeKwx6QtcEh7HA"/>
+    </profileApplication>
+    <profileApplication xmi:id="_1RMe8MbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_1RZTQMbVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../fr.vinsnet.generator.core/models/androgene.profile.uml#_ixq6cLQPEeKekLLXQKuVng"/>
+      </eAnnotations>
+      <appliedProfile href="../fr.vinsnet.generator.core/models/androgene.profile.uml#_Nwc5ALBiEeKwx6QtcEh7HA"/>
+    </profileApplication>
+    <profileApplication xmi:id="_1RZTQcbVEeKyf_vZNpvnLw">
+      <eAnnotations xmi:id="_1RlggMbVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../fr.vinsnet.generator.core/models/androgene.profile.uml#_ixsIkbQPEeKekLLXQKuVng"/>
+      </eAnnotations>
+      <appliedProfile href="../fr.vinsnet.generator.core/models/androgene.profile.uml#_SOG70LB9EeKhn6F0ChNAHw"/>
+    </profileApplication>
+  </uml:Model>
+  <Model:CoreLib xmi:id="_2iV9wMbVEeKyf_vZNpvnLw" base_Package="_wWoCYMbVEeKyf_vZNpvnLw" isHibernatePersisted="true" isRestJava="true"/>
+  <Model:Bean xmi:id="_9gnXcMbVEeKyf_vZNpvnLw" base_Class="_5JzvQMbVEeKyf_vZNpvnLw"/>
+</xmi:XMI>
