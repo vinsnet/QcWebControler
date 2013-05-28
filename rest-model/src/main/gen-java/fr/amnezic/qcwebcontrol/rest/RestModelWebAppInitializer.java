@@ -9,6 +9,8 @@ import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
+import fr.amnezic.qcwebcontrol.model.jpa.JpaModelRepositoriesConfig ;
+
 
 public class RestModelWebAppInitializer implements WebApplicationInitializer{
 

@@ -52,5 +52,10 @@
   		<artifactId>hibernate-entitymanager</artifactId>
   		<version>4.2.1.Final</version>
   	</dependency>
+  	<dependency>
+  		<groupId>org.springframework.data</groupId>
+  		<artifactId>spring-data-jpa</artifactId>
+  		<version>1.4.0.VINSNET-BUILD</version>
+  	</dependency>
   </dependencies>
 </project>

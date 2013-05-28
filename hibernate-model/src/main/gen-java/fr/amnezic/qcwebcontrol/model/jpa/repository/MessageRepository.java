@@ -1,11 +1,9 @@
-package fr.amnezic.qcwebcontrol.rest.repository;
+package fr.amnezic.qcwebcontrol.model.jpa.repository;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.rest.repository.annotation.RestResource;
 
 import fr.amnezic.qcwebcontrol.model.Message;
 
-@RestResource(exported=true,rel="message")
 public interface MessageRepository extends PagingAndSortingRepository<Message	,Long >  {
 
 }

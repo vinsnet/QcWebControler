@@ -1,7 +1,6 @@
 package fr.amnezic.qcwebcontrol.model;
 
 import java.io.Serializable;
-import  java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -28,48 +27,38 @@ import javax.persistence.Column;
  *
  */
 @Entity 
-public  class Message   implements Serializable {
+public  class Aggregat   implements Serializable {
 
 			@Id @GeneratedValue
 			private long id;
 		
-		@Temporal(TemporalType.TIMESTAMP)
-			private Date dateValidation;
+		
+			private String label;
 		
 		
-			private String contenu;
-		
-		
-			private boolean isValid;
+			private int count;
 		
 	
 		
-		public Message(){
+		public Aggregat(){
 		}
 	
 			public long getId(){return this.id;}
 			public void setId(long id){this.id=id;}
 		
 		
-			public Date getDateValidation(){
-				return this.dateValidation ;
+			public String getLabel(){
+				return this.label ;
 			}
-			public void setDateValidation( Date dateValidation){
-				this.dateValidation = dateValidation ;
-			}
-		
-			public String getContenu(){
-				return this.contenu ;
-			}
-			public void setContenu( String contenu){
-				this.contenu = contenu ;
+			public void setLabel( String label){
+				this.label = label ;
 			}
 		
-			public boolean getIsValid(){
-				return this.isValid ;
+			public int getCount(){
+				return this.count ;
 			}
-			public void setIsValid( boolean isValid){
-				this.isValid = isValid ;
+			public void setCount( int count){
+				this.count = count ;
 			}
 		
 	

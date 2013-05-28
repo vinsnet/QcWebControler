@@ -1,5 +1,5 @@
 	
-package fr.vinsnet.tarots;
+package fr.amnezic.qcwebcontrol;
 	
 
 import java.util.Date;
