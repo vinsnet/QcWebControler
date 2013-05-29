@@ -33,14 +33,14 @@ public  class Message   implements Serializable {
 			@Id @GeneratedValue
 			private long id;
 		
+		
+			private boolean isValid;
+		
 		@Temporal(TemporalType.TIMESTAMP)
 			private Date dateValidation;
 		
 		
 			private String contenu;
-		
-		
-			private boolean isValid;
 		
 	
 		
@@ -50,6 +50,13 @@ public  class Message   implements Serializable {
 			public long getId(){return this.id;}
 			public void setId(long id){this.id=id;}
 		
+		
+			public boolean getIsValid(){
+				return this.isValid ;
+			}
+			public void setIsValid( boolean isValid){
+				this.isValid = isValid ;
+			}
 		
 			public Date getDateValidation(){
 				return this.dateValidation ;
@@ -63,13 +70,6 @@ public  class Message   implements Serializable {
 			}
 			public void setContenu( String contenu){
 				this.contenu = contenu ;
-			}
-		
-			public boolean getIsValid(){
-				return this.isValid ;
-			}
-			public void setIsValid( boolean isValid){
-				this.isValid = isValid ;
 			}
 		
 	

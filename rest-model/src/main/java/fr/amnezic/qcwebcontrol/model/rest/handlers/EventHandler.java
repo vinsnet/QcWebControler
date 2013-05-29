@@ -1,5 +1,7 @@
 package fr.amnezic.qcwebcontrol.model.rest.handlers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.repository.annotation.HandleAfterCreate;
 import org.springframework.data.rest.repository.annotation.HandleAfterSave;
@@ -28,13 +30,16 @@ public class EventHandler  {
   
   public void handleAfterMessageSave(Message m) {
 
-	  Aggregat aggregat = aggregatRepository.findByLabel(m.getContenu());
-	  if(aggregat==null){
-		  aggregat = new Aggregat();
-		  aggregat.setLabel(m.getContenu());
+	  List<Aggregat> aggregats = aggregatRepository.findByLabel(m.getContenu());
+	  Aggregat firstAggragat = null;
+	  if(aggregats==null || aggregats.isEmpty()){
+		  firstAggragat = new Aggregat();
+		  firstAggragat.setLabel(m.getContenu());
+	  }else{
+		  firstAggragat = aggregats.get(0);
 	  }
-	  aggregat.setCount(aggregat.getCount()+1);
-	  aggregatRepository.save(aggregat);
+	  firstAggragat.setCount(firstAggragat.getCount()+1);
+	  aggregatRepository.save(firstAggragat);
   }
 
 

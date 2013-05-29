@@ -9,11 +9,11 @@
   </eAnnotations>
   <children xmi:type="notation:Shape" xmi:id="_wWp3kMbVEeKyf_vZNpvnLw" type="2007">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2ia2QMbVEeKyf_vZNpvnLw" source="Stereotype_Annotation">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zuCRYMdJEeKBt8DJqAiD4A" key="StereotypeWithQualifiedNameList" value=""/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zuCRYcdJEeKBt8DJqAiD4A" key="StereotypeList" value="Androgene::Model::CoreLib"/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zuCRYsdJEeKBt8DJqAiD4A" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zuCRY8dJEeKBt8DJqAiD4A" key="PropStereoDisplay" value=""/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zuCRZMdJEeKBt8DJqAiD4A" key="StereotypePropertyLocation" value="Compartment"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QK61IMhwEeKGnvEsjyceEQ" key="StereotypeWithQualifiedNameList" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QK61IchwEeKGnvEsjyceEQ" key="StereotypeList" value="Androgene::Model::CoreLib"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QK61IshwEeKGnvEsjyceEQ" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QK61I8hwEeKGnvEsjyceEQ" key="PropStereoDisplay" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QK61JMhwEeKGnvEsjyceEQ" key="StereotypePropertyLocation" value="Compartment"/>
     </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_wWp3ksbVEeKyf_vZNpvnLw" type="5026"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_wWp3k8bVEeKyf_vZNpvnLw" type="7016">
@@ -27,11 +27,11 @@
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5J7EA8bVEeKyf_vZNpvnLw" key="fontColor" value="true"/>
         </eAnnotations>
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9gjGAMbVEeKyf_vZNpvnLw" source="Stereotype_Annotation">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kktFUMdKEeKBt8DJqAiD4A" key="StereotypeWithQualifiedNameList" value=""/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kktsYMdKEeKBt8DJqAiD4A" key="StereotypeList" value="Androgene::Model::Bean"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kktsYcdKEeKBt8DJqAiD4A" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kktsYsdKEeKBt8DJqAiD4A" key="PropStereoDisplay" value=""/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kktsY8dKEeKBt8DJqAiD4A" key="StereotypePropertyLocation" value="Compartment"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SWSggMhwEeKGnvEsjyceEQ" key="StereotypeWithQualifiedNameList" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SWSggchwEeKGnvEsjyceEQ" key="StereotypeList" value="Androgene::Model::Bean"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SWSggshwEeKGnvEsjyceEQ" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SWSgg8hwEeKGnvEsjyceEQ" key="PropStereoDisplay" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SWSghMhwEeKGnvEsjyceEQ" key="StereotypePropertyLocation" value="Compartment"/>
         </eAnnotations>
         <children xmi:type="notation:DecorationNode" xmi:id="_5J4nwMbVEeKyf_vZNpvnLw" type="label_sysml_block_name"/>
         <children xmi:type="notation:ListCompartment" xmi:id="_5J4nwcbVEeKyf_vZNpvnLw" type="compartment_sysml_property_as_list" showTitle="true">
@@ -129,11 +129,11 @@
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7seHnMdJEeKBt8DJqAiD4A" key="fontColor" value="true"/>
         </eAnnotations>
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k4ztEMdKEeKBt8DJqAiD4A" source="Stereotype_Annotation">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lS62MMdKEeKBt8DJqAiD4A" key="StereotypeWithQualifiedNameList" value=""/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lS62McdKEeKBt8DJqAiD4A" key="StereotypeList" value="Androgene::Model::Bean"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lS62MsdKEeKBt8DJqAiD4A" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lS62M8dKEeKBt8DJqAiD4A" key="PropStereoDisplay" value=""/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lS62NMdKEeKBt8DJqAiD4A" key="StereotypePropertyLocation" value="Compartment"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S9KTQMhwEeKGnvEsjyceEQ" key="StereotypeWithQualifiedNameList" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S9KTQchwEeKGnvEsjyceEQ" key="StereotypeList" value="Androgene::Model::Bean"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S9KTQshwEeKGnvEsjyceEQ" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S9KTQ8hwEeKGnvEsjyceEQ" key="PropStereoDisplay" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S9KTRMhwEeKGnvEsjyceEQ" key="StereotypePropertyLocation" value="Compartment"/>
         </eAnnotations>
         <children xmi:type="notation:DecorationNode" xmi:id="_7sc5cMdJEeKBt8DJqAiD4A" type="label_sysml_block_name"/>
         <children xmi:type="notation:ListCompartment" xmi:id="_7sc5ccdJEeKBt8DJqAiD4A" type="compartment_sysml_property_as_list" showTitle="true">
@@ -142,6 +142,13 @@
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SyscQMdKEeKBt8DJqAiD4A" key="bold" value="true"/>
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SyscQcdKEeKBt8DJqAiD4A" key="italic" value="true"/>
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SyscQsdKEeKBt8DJqAiD4A" key="fontColor" value="true"/>
+            </eAnnotations>
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UNt8MMhwEeKGnvEsjyceEQ" source="Stereotype_Annotation">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UNt8MchwEeKGnvEsjyceEQ" key="StereotypeWithQualifiedNameList" value=""/>
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UNt8MshwEeKGnvEsjyceEQ" key="StereotypeList" value="Androgene::Model::Searchable"/>
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UNt8M8hwEeKGnvEsjyceEQ" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UNujQMhwEeKGnvEsjyceEQ" key="PropStereoDisplay" value=""/>
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UNujQchwEeKGnvEsjyceEQ" key="StereotypePropertyLocation" value="Compartment"/>
             </eAnnotations>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_Syr1McdKEeKBt8DJqAiD4A" fontName="Cantarell" fontHeight="11" fillColor="0" lineColor="0"/>
             <element xmi:type="uml:Property" href="model.uml#_SyjSUMdKEeKBt8DJqAiD4A"/>
