@@ -1,0 +1,7 @@
+.debug{
+	visibility :hidden
+}
+
+.debbuging .debug{
+	visibility: visible
+}
