@@ -38,8 +38,8 @@ import fr.amnezic.qcwebcontrol.model.Message;
 				
 				Message m2 = new Message();
 				m2.setContenu("Coucou Chet'Bi");
-				m2.setDateValidation(new Date());
-				m2.setIsValid(true);
+				//m2.setDateValidation(new Date());
+				//m2.setIsValid(true);
 
 
 				em.persist(m1);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model="http://Androgene/schemas/Model/_nOPyYMhmEeKLQ91LSN_1Aw/17" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http://Androgene/schemas/Model/_nOPyYMhmEeKLQ91LSN_1Aw/17 ../../fr.vinsnet.generator.core/models/androgene.profile.uml#_nOQZcMhmEeKLQ91LSN_1Aw">
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model="http://Androgene/schemas/Model/_nOPyYMhmEeKLQ91LSN_1Aw/17" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http://Androgene/schemas/Model/_nOPyYMhmEeKLQ91LSN_1Aw/17 file:/home/vinsnet/workspaces/git/fr.vinsnet.generator.core/models/androgene.profile.uml#_nOQZcMhmEeKLQ91LSN_1Aw">
   <uml:Model xmi:id="_vybwMMbVEeKyf_vZNpvnLw" name="fr.amnezic.qcwebcontrol">
     <packageImport xmi:id="_KGAFUMhwEeKGnvEsjyceEQ">
       <importedPackage xmi:type="uml:Model" href="../../fr.vinsnet.generator.core/models/types-uml.uml#_HbfdMLPzEeKYaO6e_TaXyw"/>
@@ -9,12 +9,15 @@
         <ownedAttribute xmi:id="_7OaEQMbVEeKyf_vZNpvnLw" name="contenu" visibility="public">
           <type xmi:type="uml:PrimitiveType" href="../../fr.vinsnet.generator.core/models/types-uml.uml#_rTbpgLP2EeKPAOs8uz-flg"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_X8n8MMbWEeKyf_vZNpvnLw" name="isValid">
-          <type xmi:type="uml:PrimitiveType" href="../../fr.vinsnet.generator.core/models/types-uml.uml#_6ZnlgLP2EeKPAOs8uz-flg"/>
-          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_b1dO8MbWEeKyf_vZNpvnLw" name=""/>
-        </ownedAttribute>
-        <ownedAttribute xmi:id="_gqPzoMbWEeKyf_vZNpvnLw" name="dateValidation">
+        <ownedAttribute xmi:id="_gqPzoMbWEeKyf_vZNpvnLw" name="datePost">
           <type xmi:type="uml:PrimitiveType" href="../../fr.vinsnet.generator.core/models/types-uml.uml#_lTECgLP2EeKPAOs8uz-flg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_R-j88Mk0EeKaYpT60CXYHQ" name="aggregat" type="_7sTvgMdJEeKBt8DJqAiD4A" association="_R-frgMk0EeKaYpT60CXYHQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XT1_kMk0EeKaYpT60CXYHQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XT2moMk0EeKaYpT60CXYHQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gjV1AMk0EeKaYpT60CXYHQ" name="ip">
+          <type xmi:type="uml:PrimitiveType" href="../../fr.vinsnet.generator.core/models/types-uml.uml#_rTbpgLP2EeKPAOs8uz-flg"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_7sTvgMdJEeKBt8DJqAiD4A" name="Aggregat">
@@ -24,7 +27,24 @@
         <ownedAttribute xmi:id="_YbHdUMdKEeKBt8DJqAiD4A" name="count">
           <type xmi:type="uml:PrimitiveType" href="../../fr.vinsnet.generator.core/models/types-uml.uml#_QpCx4LPzEeKYaO6e_TaXyw"/>
         </ownedAttribute>
+        <ownedAttribute xmi:id="_2qs4QMk1EeKaYpT60CXYHQ" name="etatModeration" type="_pmcXwMk1EeKaYpT60CXYHQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6SZ-wMk1EeKaYpT60CXYHQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6Sal0Mk1EeKaYpT60CXYHQ" value="1"/>
+        </ownedAttribute>
       </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_pmcXwMk1EeKaYpT60CXYHQ" name="Moderation">
+        <ownedLiteral xmi:id="_rr4aQMk1EeKaYpT60CXYHQ" name="allowed"/>
+        <ownedLiteral xmi:id="_t5LYQMk1EeKaYpT60CXYHQ" name="rejected"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_R-frgMk0EeKaYpT60CXYHQ" name="aggregerEn" memberEnd="_R-j88Mk0EeKaYpT60CXYHQ _R-j88ck0EeKaYpT60CXYHQ">
+      <eAnnotations xmi:id="_R-jV4Mk0EeKaYpT60CXYHQ" source="org.eclipse.papyrus">
+        <details xmi:id="_R-jV4ck0EeKaYpT60CXYHQ" key="nature" value="SysML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_R-j88ck0EeKaYpT60CXYHQ" name="message" type="_5JzvQMbVEeKyf_vZNpvnLw" association="_R-frgMk0EeKaYpT60CXYHQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VrkaMMk0EeKaYpT60CXYHQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VrloUMk0EeKaYpT60CXYHQ" value="*"/>
+      </ownedEnd>
     </packagedElement>
     <profileApplication xmi:id="_vy97sMbVEeKyf_vZNpvnLw">
       <eAnnotations xmi:id="_vy_J0MbVEeKyf_vZNpvnLw" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -103,4 +123,7 @@
   <Model:Bean xmi:id="_SWLy0MhwEeKGnvEsjyceEQ" base_Class="_5JzvQMbVEeKyf_vZNpvnLw"/>
   <Model:Bean xmi:id="_S9FawMhwEeKGnvEsjyceEQ" base_Class="_7sTvgMdJEeKBt8DJqAiD4A"/>
   <Model:Searchable xmi:id="_UNnOgMhwEeKGnvEsjyceEQ" base_Property="_SyjSUMdKEeKBt8DJqAiD4A"/>
+  <Model:Constante xmi:id="_0OHhEMk1EeKaYpT60CXYHQ" base_EnumerationLiteral="_rr4aQMk1EeKaYpT60CXYHQ"/>
+  <Model:Constante xmi:id="_0-P9gMk1EeKaYpT60CXYHQ" base_EnumerationLiteral="_t5LYQMk1EeKaYpT60CXYHQ"/>
+  <Model:Searchable xmi:id="_aCNpUMk_EeKyI7fI5kecuQ" base_Property="_2qs4QMk1EeKaYpT60CXYHQ"/>
 </xmi:XMI>

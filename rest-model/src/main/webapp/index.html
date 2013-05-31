@@ -1,12 +1,15 @@
 <html>
 <head>
 <title>QC Web Control</title>
-<script type="text/javascript" src="jquery-2.0.1-dev.js"></script>
-<link rel="stylesheet" href="default.css">
+<script type="text/javascript" src="scripts/jquery-2.0.1-dev.js"></script>
+<script type="text/javascript" src="scripts/qcwebcontrol.js"></script>
+<link rel="stylesheet" href="themes/default.css">
 </head>
 
-<body class=""> <!-- class="debbuging" -->
+<body class="debbuging"> <!-- class="debbuging" -->
 <a class="debug" href = "model/">model</a><br/>
+<a class="debug" href = "moderation.html">moderation</a><br/>
+<a class="debug" href = "remplissage.html">remplissage</a><br/>
 
 Quel est le mot qui represente le mieux Prun' pour toi ?
 <form action="model/message" method="post" id="messageForm">
@@ -22,29 +25,18 @@ $("#messageForm").submit(function(event) {
  
   /* stop form from submitting normally */
   event.preventDefault();
- 
-  /* get some values from elements on the page: */
-  var $form = $( this ),
-      term = $form.find( 'input[name="contenu"]' ).val(),
-      url = $form.attr( 'action' );
-  var message = new Object();
-  message.contenu = term;
- console.log(url+ '->' +JSON.stringify(message));
-  /* Send the data using post */
- var updateLastCreated = function(url){
+
+  var $form = $( this );
+  var message = $form.find( 'input[name="contenu"]' ).val();
+  
+  var updateLastCreated = function(data, textStatus, jqXHR){
+	  var url = jqXHR.getResponseHeader("location");
+	  $("#messageForm").get(0).reset();
 	  $("#lastCreation").html("<a href='"+url+"'>Derniere Creation</a>")
  }
-  
-  $.ajax(url,{
-	  contentType : "application/json",
-	  type :"POST",
-	  data : JSON.stringify(message) })
-	  .done(function (data, textStatus, jqXHR) {
-	  	updateLastCreated(jqXHR.getResponseHeader("location"));
-		$("#messageForm").get(0).reset();
-   	});
-  
-
+ 
+ postMessage(message,updateLastCreated);
+	
   
 });
 </script>

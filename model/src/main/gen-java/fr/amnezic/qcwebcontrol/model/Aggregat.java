@@ -1,6 +1,7 @@
 package fr.amnezic.qcwebcontrol.model;
 
 import java.io.Serializable;
+import  fr.amnezic.qcwebcontrol.model.types.Moderation;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -35,6 +36,12 @@ public  class Aggregat   implements Serializable {
 		
 			private String label;
 		
+		@Embedded
+		    @AttributeOverrides( {
+		    @AttributeOverride(name="id", column= @Column(name="etatModeration_id") ),
+			@AttributeOverride(name="shortName", column= @Column(name="etatModeration_shortName") )})
+			private Moderation etatModeration;
+		
 		
 			private int count;
 		
@@ -52,6 +59,13 @@ public  class Aggregat   implements Serializable {
 			}
 			public void setLabel( String label){
 				this.label = label ;
+			}
+		
+			public Moderation getEtatModeration(){
+				return this.etatModeration ;
+			}
+			public void setEtatModeration( Moderation etatModeration){
+				this.etatModeration = etatModeration ;
 			}
 		
 			public int getCount(){

@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>QC Web Control - Modération </title>
+<script type="text/javascript" src="scripts/jquery-2.0.1-dev.js"></script>
+<script type="text/javascript" src="scripts/qcwebcontrol.js"></script>
+<link rel="stylesheet" href="themes/default.css">
+</head>
+
+<body class=""> <!-- class="debbuging" -->
+<a class="debug" href = "model/">model</a><br/>
+Liste des messages à moderer :
+
+<form id="aggregatsForm">
+<ul id="pendingAggregats" class="pending">
+</ul>
+<ul id="allowedAggregats" class="allowed">
+</ul>
+<ul id="rejectedAggregats" class="rejected">
+</ul>
+</form>
+<div id="info" class="debug"></div>
+
+<script>
+
+updateInterval=1000;//10 secondes
+
+$(function(){
+
+	//TODO mettre les aggregats (pas les liste) dans un tableau dans le formulaire (indexé sur les id des listes)
+	//TODO gerer le focus sur le li 
+	//TODO charger les pages suivantes (avec un delai)
+	
+	$.fn.getTargetcontainer = function(aggregat){
+		
+
+		var aggregatsForm = this;
+		
+		if(aggregat.etatModeration==null){
+			return aggregatsForm.find(".pending");
+		}else{
+			switch(aggregat.etatModeration['id']){
+			case 1 :
+				return aggregatsForm.find(".allowed");
+				break;
+
+			case 2 :
+				return aggregatsForm.find(".rejected");
+				break;
+			}
+		}
+	};
+	
+	$.fn.attachToList=function(li){
+		var aggregatsForm = this;
+		li.appendTo(aggregatsForm.getTargetcontainer(li.aggregat));
+	}
+	
+	$.fn.updateAggregat = function(aggregat){
+		var aggregatsForm = this;
+		//TODO tester le focus, si focus => ne rien faire 
+		// Comment montrer qu'il y a une difference entre la version courrant et la la version distante ?
+		 var existingAggregat = aggregatsForm.find("#aggregat_"+aggregat.id);
+		 if(existingAggregat.length>0){
+			 existingAggregat.find("input[name^=aggregat_label_]:not(:focus)").val(aggregat.label);
+			 existingAggregat.find("input[name^=aggregat_count_]:not(:focus)").val(aggregat.count);
+			 if(aggregatsForm.getTargetcontainer(aggregat)!=existingAggregat.parent()){
+				existingAggregat.detach();
+				existingAggregat.appendTo(aggregatsForm.getTargetcontainer(aggregat)); 
+			 }
+		 }
+		
+	}
+	
+	
+	$.fn.removeAggregat = function(aggregat){
+		var aggregatsForm = this;
+		//TODO tester le focus, si focus => Que faire ?
+		
+	}
+	
+	
+	$.fn.appendAggregat = function(aggregat){
+		var aggregatsForm = this;
+// TODO CSS : si focus alors editable, sinon tant pis
+		var newAggregat = $("<li id='aggregat_"+aggregat.id+"'></li>");
+		newAggregat.hide();
+		newAggregat.aggregat= aggregat;
+		newAggregat.append("<input name='aggregat_label_"+aggregat.id+"' type='text' value='"+aggregat.label+"' >");
+		newAggregat.append("<input name='aggregat_count_"+aggregat.id+"' type='text' value='"+aggregat.count+"' >");
+		newAggregat.append("<input name='aggregat_etatModeration_allow_"+aggregat.id+"' type='button' value='Accepter' class='allow'>");
+		newAggregat.append("<input name='aggregat_etatModeration_reject_"+aggregat.id+"' type='button' value='Refuser' class='reject' >");
+		
+		//TODO separer le traitement entre accepter et rejecter
+		newAggregat.find(":button").click(newAggregat,function(event){
+			var li =event.data;
+			//si click sur accepter
+			if($(event.target).hasClass("allow")){
+				li.detach();
+				li.aggregat.etatModeration=getModificationAllowed();
+			}else if($(event.target).hasClass("reject")){
+				li.detach();
+				li.aggregat.etatModeration=getModificationRejected();
+			}			
+			aggregatsForm.attachToList(li);
+			putAggregat(li.aggregat);
+		});
+
+		newAggregat.find(":input").change(newAggregat,function(event){
+			var li =event.data;
+			aggregat.label =li.find("input[name^=aggregat_label_]").val();
+			aggregat.count = li.find("input[name^=aggregat_count_]").val();
+			putAggregat(li.aggregat);
+		});
+		
+		
+		aggregatsForm.attachToList(newAggregat);
+		newAggregat.show();
+		
+		
+	}
+
+	$.fn.updateAggregats = function(){
+		var aggregatsForm = this;
+		 var newMessages = getAggregats(function(aggregats){
+			 for (var i = 0; i < aggregats.length; i++) {
+				 var currentAggregat=  aggregats[i];
+				 var existingAggregat = aggregatsForm.find("#aggregat_"+currentAggregat.id);
+				if(existingAggregat.length>0){
+					aggregatsForm.updateAggregat(currentAggregat);
+				}else{
+					aggregatsForm.appendAggregat(currentAggregat);
+				}
+		 	}
+			 
+			 setTimeout(function(){aggregatsForm.updateAggregats()},updateInterval);
+			 
+		 });
+
+		 return aggregatsForm;
+	}
+
+	$.fn.initAggregats = function(){
+		
+		var aggregatsForm = this;
+		
+		getAggregats(function(aggregats){
+		for (var i = 0; i < aggregats.length; i++) {
+			aggregatsForm.appendAggregat(aggregats[i]);	
+	 	}
+		setTimeout(function(){aggregatsForm.updateAggregats()},updateInterval);
+	  });
+	 
+	return aggregatsForm;
+		
+	};
+	
+	
+	$("#aggregatsForm").initAggregats();
+});
+</script>
+
+</body>
+</html>

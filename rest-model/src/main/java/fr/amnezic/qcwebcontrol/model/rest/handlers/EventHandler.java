@@ -1,10 +1,14 @@
 package fr.amnezic.qcwebcontrol.model.rest.handlers;
 
+import java.util.Date;
 import java.util.List;
+
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.repository.annotation.HandleAfterCreate;
 import org.springframework.data.rest.repository.annotation.HandleAfterSave;
+import org.springframework.data.rest.repository.annotation.HandleBeforeCreate;
 import org.springframework.data.rest.repository.annotation.RepositoryEventHandler;
 
 import fr.amnezic.qcwebcontrol.model.Aggregat;
@@ -24,11 +28,14 @@ public class EventHandler  {
 
   
   
-	
-  @HandleAfterCreate(Message.class)
-  @HandleAfterSave(Message.class)
+  @HandleBeforeCreate(Message.class)
+  public void setMessageDate(Message m) {
+	  m.setDatePost(new Date());
+	 
+  }
   
-  public void handleAfterMessageSave(Message m) {
+  @HandleBeforeCreate(Message.class)
+  public void handleAfterMessageCreated(Message m) {
 
 	  List<Aggregat> aggregats = aggregatRepository.findByLabel(m.getContenu());
 	  Aggregat firstAggragat = null;
@@ -39,7 +46,8 @@ public class EventHandler  {
 		  firstAggragat = aggregats.get(0);
 	  }
 	  firstAggragat.setCount(firstAggragat.getCount()+1);
-	  aggregatRepository.save(firstAggragat);
+	  
+	  m.setAggregat(aggregatRepository.save(firstAggragat));
   }
 
 

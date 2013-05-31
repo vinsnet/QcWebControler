@@ -5,6 +5,7 @@
     version="2.0">
 <persistence-unit name="qcwebcontrol-model">
 	<class>fr.amnezic.qcwebcontrol.model.Aggregat</class>
+	<class>fr.amnezic.qcwebcontrol.model.types.Moderation</class>
 	<class>fr.amnezic.qcwebcontrol.model.Message</class>
     <properties>
 		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>

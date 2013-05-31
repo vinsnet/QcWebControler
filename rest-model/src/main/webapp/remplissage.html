@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>QC Web Control - cheat page</title>
+<script type="text/javascript" src="scripts/jquery-2.0.1-dev.js"></script>
+<script type="text/javascript" src="scripts/qcwebcontrol.js"></script>
+<link rel="stylesheet" href="themes/default.css">
+</head>
+
+<body class=""> <!-- class="debbuging" -->
+<a class="debug" href = "model/">model</a><br/>
+<!-- Liste des messages a valider ou a rejeter : -->
+<form id="fillingForm" action="null">
+<input type="submit" value="remplir le nuage">
+</form>  
+<form id="fillingForm2" action="null">
+<input type="submit" value="insister sur certains mots">
+</form> 
+<ul div="pendingMessage"></ul>
+
+<div id="info" class="debug"></div>
+
+<script>
+
+
+
+var messages2 = ["92FM","Amnezic","SuperBoule","Radio","Musique"];
+
+var messages = ["92FM",
+                "Nantes",
+                "Musique",
+                "SuperBoule",
+                "Radio",
+                "Web",
+                "evenements",
+                "Infos",
+                "Sport",
+                "Cine",
+                "Spectacles",
+                "Culture",
+                "Sciences",
+                "Associations",
+                "Journalisme",
+                "Festivals",
+                "Electro",
+                "Hip-Hop",
+                "Dub",
+                "Reggae",
+                "Funk",
+                "Jazz",
+
+                "Amnezic",
+                "Orbeat",
+                "YCKM",
+                "Eclectric Chicken",
+                "Get up! Radio Show",
+                "Triangle",
+                "Ground Control",
+                "Ghetto Blaster",
+                "Abstrakt Gram",
+                "My Web Generation",
+                "Mixadelic",
+                "Electronic Mission",
+
+                "Poney Project",
+                "Fun",
+                "Drole",
+                "Intelligents",
+                "Beau Gosse"];
+
+
+$("#fillingForm").submit(function(event) {
+  /* stop form from submitting normally */
+  event.preventDefault();
+   
+  for (var i = 0; i < messages.length; i++) {
+	  postMessage(messages[i]);
+	 // sleep(100);
+	}
+  
+});
+
+$("#fillingForm2").submit(function(event) {
+	  /* stop form from submitting normally */
+	  event.preventDefault();
+	  for(var j = 0 ; j<11;j++){ 
+		  sleep(2000);
+	  	for (var i = 0; i < messages2.length; i++) {
+	  		postMessage(messages2[i]);
+		}
+	  }
+	});
+
+
+
+
+
+var loadPendingMessage = function(timestamp){
+
+};
+
+
+
+$(document).ready(function(){
+
+	loadPendingMessage(0);
+});
+</script>
+
+</body>
+</html>
