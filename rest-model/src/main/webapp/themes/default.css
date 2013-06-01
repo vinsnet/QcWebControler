@@ -11,3 +11,9 @@
 #aggregatsForm ul.rejected input.reject{
 	visibility : hidden;
 }
+
+
+#aggregatsForm input[type='text']{
+	border :none;
+	padding : 2px;
+}
