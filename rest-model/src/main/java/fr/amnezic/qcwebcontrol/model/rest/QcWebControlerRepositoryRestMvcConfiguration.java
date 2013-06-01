@@ -19,7 +19,7 @@ public class QcWebControlerRepositoryRestMvcConfiguration extends
 	@Override protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
 		  config.setPageParamName("p")
 		        .setLimitParamName("l")
-		        .setSortParamName("q");
+		        .setSortParamName("s");
 		}
 
 	@Bean

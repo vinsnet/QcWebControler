@@ -61,26 +61,40 @@ var putAggregat = function(aggregat){
 };
 
 var getAggregats = function ( handleAggregats){
+return getAggregatsWithParams(handleAggregats,{p : 1,l:30});
+};
+
+var getAggregatsWithParams = function ( handleAggregats,params){
 	var jqXHR=$.ajax(aggregatBaseURL,{
 		  contentType : "application/json",
 		  type :"GET",
-		  data : JSON.stringify([]) });
+		  data : params });
 	jqXHR.done(function(data, textStatus, jqXHR){
+
+		var pageLinks= [];
+		var loadNextPage = null;
 		var jsonResponse = JSON.parse(jqXHR.responseText);
-		$(jsonResponse.content).each(function(){
-			for(var i=0;i<this.links.length;i++){
-				if(this.links[i]['rel']=="self"){
-					this.url = this.links[i]['href'];
-					break;
-				}
-			}
-			this.id = /[0-9]*$/.exec(this.url)[0];	
+		for(var i=0;i<jsonResponse.links.length;i++){
+			pageLinks[jsonResponse.links[i]['rel']]=jsonResponse.links[i]['href'];
 		}
-		);
-		handleAggregats(jsonResponse.content);
+		$(jsonResponse.content).each(function(){
+			var links=[];
+			for(var i=0;i<this.links.length;i++){
+				links[this.links[i]['rel']]=this.links[i]['href'];
+			}
+			this.url = links["self"];
+			this.id = /[0-9]*$/.exec(this.url)[0];	
+		});
+
+		if(pageLinks["page.next"]){
+			loadNextPage=function(){
+				params.p+=1;
+				getAggregatsWithParams(handleAggregats,params);
+			};
+		}
+		handleAggregats(jsonResponse.content,loadNextPage);
 		});
 	
-	//TODO faire les page suivantes s'il y en a
 };
 
 
