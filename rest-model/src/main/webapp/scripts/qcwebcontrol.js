@@ -4,15 +4,7 @@ var aggregatEtatModerationIsNullURL = "model/aggregat/search/findByEtatModeratio
 
 
 
-var sleep  = function (milliseconds) {
-	//TODO  use setTimeout
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
-};
+
 
 
 var postMessage = function(content,doneFunction){

@@ -74,7 +74,6 @@ $("#fillingForm").submit(function(event) {
    
   for (var i = 0; i < messages.length; i++) {
 	  postMessage(messages[i]);
-	 // sleep(100);
 	}
   
 });
@@ -83,7 +82,6 @@ $("#fillingForm2").submit(function(event) {
 	  /* stop form from submitting normally */
 	  event.preventDefault();
 	  for(var j = 0 ; j<11;j++){ 
-		  sleep(2000);
 	  	for (var i = 0; i < messages2.length; i++) {
 	  		postMessage(messages2[i]);
 		}
