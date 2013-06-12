@@ -2,7 +2,7 @@
 <head>
 <title>QC Web Control - cheat page</title>
 <script type="text/javascript" src="scripts/jquery-2.0.1-dev.js"></script>
-<script type="text/javascript" src="scripts/qcwebcontrol.js"></script>
+<script type="text/javascript" src="gen-scripts/jquery-model.js"></script>
 <link rel="stylesheet" href="themes/default.css">
 </head>
 
@@ -73,7 +73,9 @@ $("#fillingForm").submit(function(event) {
   event.preventDefault();
    
   for (var i = 0; i < messages.length; i++) {
-	  postMessage(messages[i]);
+	  var messageObject = new Object();
+	  messageObject.contenu = messages[i];
+	  createMessage(messageObject);
 	}
   
 });
@@ -83,7 +85,10 @@ $("#fillingForm2").submit(function(event) {
 	  event.preventDefault();
 	  for(var j = 0 ; j<11;j++){ 
 	  	for (var i = 0; i < messages2.length; i++) {
-	  		postMessage(messages2[i]);
+
+	  	  var messageObject = new Object();
+	  	  messageObject.contenu = messages2[i];
+		  createMessage(messageObject);
 		}
 	  }
 	});

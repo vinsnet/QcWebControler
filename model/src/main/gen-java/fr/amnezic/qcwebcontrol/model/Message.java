@@ -1,8 +1,8 @@
 package fr.amnezic.qcwebcontrol.model;
 
 import java.io.Serializable;
-import  fr.amnezic.qcwebcontrol.model.Aggregat;
 import  java.util.Date;
+import  fr.amnezic.qcwebcontrol.model.Aggregat;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -34,19 +34,19 @@ public  class Message   implements Serializable {
 			@Id @GeneratedValue
 			private long id;
 		
+		@Temporal(TemporalType.TIMESTAMP)
+			private Date datePost;
+		
 		@OneToOne
 		
 		
 			private Aggregat aggregat;
 		
 		
-			private String ip;
-		
-		
 			private String contenu;
 		
-		@Temporal(TemporalType.TIMESTAMP)
-			private Date datePost;
+		
+			private String ip;
 		
 	
 		
@@ -57,18 +57,18 @@ public  class Message   implements Serializable {
 			public void setId(long id){this.id=id;}
 		
 		
+			public Date getDatePost(){
+				return this.datePost ;
+			}
+			public void setDatePost( Date datePost){
+				this.datePost = datePost ;
+			}
+		
 			public Aggregat getAggregat(){
 				return this.aggregat ;
 			}
 			public void setAggregat( Aggregat aggregat){
 				this.aggregat = aggregat ;
-			}
-		
-			public String getIp(){
-				return this.ip ;
-			}
-			public void setIp( String ip){
-				this.ip = ip ;
 			}
 		
 			public String getContenu(){
@@ -78,11 +78,11 @@ public  class Message   implements Serializable {
 				this.contenu = contenu ;
 			}
 		
-			public Date getDatePost(){
-				return this.datePost ;
+			public String getIp(){
+				return this.ip ;
 			}
-			public void setDatePost( Date datePost){
-				this.datePost = datePost ;
+			public void setIp( String ip){
+				this.ip = ip ;
 			}
 		
 	

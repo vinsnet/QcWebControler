@@ -2,7 +2,7 @@
 <head>
 <title>QC Web Control</title>
 <script type="text/javascript" src="scripts/jquery-2.0.1-dev.js"></script>
-<script type="text/javascript" src="scripts/qcwebcontrol.js"></script>
+<script type="text/javascript" src="gen-scripts/jquery-model.js"></script>
 <link rel="stylesheet" href="themes/default.css">
 </head>
 
@@ -27,7 +27,8 @@ $("#messageForm").submit(function(event) {
   event.preventDefault();
 
   var $form = $( this );
-  var message = $form.find( 'input[name="contenu"]' ).val();
+  var message = new Object();
+  message.contenu = $form.find( 'input[name="contenu"]' ).val();
   
   var updateLastCreated = function(data, textStatus, jqXHR){
 	  var url = jqXHR.getResponseHeader("location");
@@ -35,7 +36,8 @@ $("#messageForm").submit(function(event) {
 	  $("#lastCreation").html("<a href='"+url+"'>Derniere Creation</a>")
  }
  
- postMessage(message,updateLastCreated);
+ 
+ createMessage(message,updateLastCreated);
 	
   
 });

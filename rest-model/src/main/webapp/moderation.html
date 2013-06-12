@@ -3,7 +3,7 @@
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
 <title>QC Web Control - Modération </title>
 <script type="text/javascript" src="scripts/jquery-2.0.1-dev.js"></script>
-<script type="text/javascript" src="scripts/qcwebcontrol.js"></script>
+<script type="text/javascript" src="gen-scripts/jquery-model.js"></script>
 <link rel="stylesheet" href="themes/default.css">
 </head>
 
@@ -98,20 +98,20 @@ $(function(){
 			//si click sur accepter
 			if($(event.target).hasClass("allow")){
 				li.detach();
-				li.aggregat.etatModeration=getModificationAllowed();
+				li.aggregat.etatModeration=getModerationAllowed();
 			}else if($(event.target).hasClass("reject")){
 				li.detach();
-				li.aggregat.etatModeration=getModificationRejected();
+				li.aggregat.etatModeration=getModerationRejected();
 			}			
 			li.appendTo(aggregatsForm.getTargetContainer(li.aggregat));
-			putAggregat(li.aggregat);
+			updateAggregat(li.aggregat,null);
 		});
 
 		newLiAggregat.find(":input").change(newLiAggregat,function(event){
 			var li =event.data;
 			aggregat.label =li.find("input[name^=aggregat_label_]").val();
 			aggregat.count = li.find("input[name^=aggregat_count_]").val();
-			putAggregat(li.aggregat);
+			updateAggregat(li.aggregat,null);
 		});
 		
 		
@@ -123,7 +123,7 @@ $(function(){
 
 	$.fn.updateAggregats = function(){
 		var aggregatsForm = this;
-		 var newMessages = getAggregats(function(aggregats,next){
+		 var newMessages = getAllAggregats(function(aggregats,next){
 			 for (var i = 0; i < aggregats.length; i++) {
 				 var currentAggregat=  aggregats[i];
 				 var liAggregat = aggregatsForm.find("#aggregat_"+currentAggregat.id);

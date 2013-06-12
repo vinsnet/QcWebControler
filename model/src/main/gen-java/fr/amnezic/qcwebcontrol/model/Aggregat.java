@@ -34,7 +34,7 @@ public  class Aggregat   implements Serializable {
 			private long id;
 		
 		
-			private String label;
+			private int count;
 		
 		@Embedded
 		    @AttributeOverrides( {
@@ -43,7 +43,7 @@ public  class Aggregat   implements Serializable {
 			private Moderation etatModeration;
 		
 		
-			private int count;
+			private String label;
 		
 	
 		
@@ -54,11 +54,11 @@ public  class Aggregat   implements Serializable {
 			public void setId(long id){this.id=id;}
 		
 		
-			public String getLabel(){
-				return this.label ;
+			public int getCount(){
+				return this.count ;
 			}
-			public void setLabel( String label){
-				this.label = label ;
+			public void setCount( int count){
+				this.count = count ;
 			}
 		
 			public Moderation getEtatModeration(){
@@ -68,11 +68,11 @@ public  class Aggregat   implements Serializable {
 				this.etatModeration = etatModeration ;
 			}
 		
-			public int getCount(){
-				return this.count ;
+			public String getLabel(){
+				return this.label ;
 			}
-			public void setCount( int count){
-				this.count = count ;
+			public void setLabel( String label){
+				this.label = label ;
 			}
 		
 	
